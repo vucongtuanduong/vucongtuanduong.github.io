@@ -71,8 +71,13 @@
         </p>
         <div class="meta">
           <a class="skill">Java</a>
+          <a class="skill">Spring Boot</a>
+          <a class="skill">ELK Stack</a>
+          <a class="skill">MongoDB</a>
           <a class="skill">Prometheus</a>
           <a class="skill">Grafana</a>
+          <a class="skill">JMeter</a>
+          <a class="skill">Docker</a>
         </div>
       </div>
     </li>
