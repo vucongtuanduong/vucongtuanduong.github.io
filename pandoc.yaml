@@ -10,10 +10,10 @@ metadata:
   csl: chicago-fullnote-bibliography-with-ibid.csl
 
 variables:
-  author-meta: Iago Leal de Freitas
-  github:    https://github.com/iagoleal
-  site-url:  https://iagoleal.com
-  site-repo: https://github.com/iagoleal/iagoleal.github.io
+  author-meta: Duong Vu Cong Tuan
+  github:    https://github.com/vucongtuanduong
+  site-url:  https://vucongtuanduong.github.io
+  site-repo: https://github.com/vucongtuanduong/vucongtuanduong.github.io
 
 # Log boilerplate
 verbosity: WARNING
