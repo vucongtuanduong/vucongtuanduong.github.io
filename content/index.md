@@ -36,7 +36,7 @@
   <ol class="project-list" aria-label="Projects">
     <li>
       <div class="title">
-        <span class="date">2026</span>
+        <span class="date">January 2026 - January 2026</span>
         <a href="https://github.com/vucongtuanduong/codecrafters-shell-go1">
           Shell implementation from scratch in Go
         </a>
@@ -56,7 +56,7 @@
 
     <li>
       <div class="title">
-        <span class="date">2025</span>
+        <span class="date">April 2025 - June 2025</span>
         <a href="https://github.com/Duong-Vu-Personal-Projects/load-testing-system">
           Load testing system
         </a>
