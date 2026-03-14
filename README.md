@@ -1,7 +1,7 @@
 # Personal Site's Source Code
 
-My own [personal website](https://iagoleal.com/).
-There is also an [RSS feed](https://iagoleal.com/rss.xml) for the posts---in case you're interested.
+My own [personal website](https://vucongtuanduong.github.io).
+There is also an [RSS feed](https://vucongtuanduong.github.io/rss.xml) for the posts---in case you're interested.
 
 The site theme is built upon oxalorg's
 [sakura-earthly](https://github.com/oxalorg/sakura) theme.

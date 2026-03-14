@@ -4,16 +4,11 @@
 <div style="grid-column: 1 / -1;" class="hero panel">
   <div class="description">
     <div class="name">
-      <h1 class="title">iago leal de&nbsp;freitas</h1>
-      <span class="ipa">
-        [iˈago leˈaʊ̯ d͡ʒi ˈfɾej.tajʃ]
-      </span>
+      <h1 class="title">Duong Vu Cong Tuan</h1>
     </div>
     <div class="salute">
     <span>
-      Hello! I'm Iago, a programmer and mathematician.
-      Welcome to my blog about mathematics, programming
-      and everything in between.
+      Hello! I'm Duong Vu Cong Tuan, a software developer. I am currently a senior at PTIT, Hanoi, Vietnam and a software developer intern. Welcome to my blog about programming, software development, my life, my point of view and everything in between.
     </span>
     </div>
   </div>
@@ -31,7 +26,7 @@
 [View all...](/posts)
 :::
 
-```{=html}
+<!-- ```{=html}
 <section id="libraries" class="panel">
   <h2 class="section-title">Scientific Libraries</h2>
 
@@ -84,14 +79,14 @@
       </a>
     </li>
   </ul>
-</section>
+</section> -->
 
-<!-- Publications panel -->
-<section id="publications" class="panel" style="grid-column: 1 / -1;">
-  <h2 class="section-title">Publications</h2>
+<!-- Projects panel -->
+<section id="projects" class="panel" style="grid-column: 1 / -1;">
+  <h2 class="section-title">Projects</h2>
 
-  <ol class="pub-list" aria-label="Publications">
-    <li>
+  <ol class="pub-list" aria-label="Projects">
+    <!-- <li>
       <div class="title">
         <span class="date">2025</span>
         <a href="https://openreview.net/forum?id=EL002DTBRA">
@@ -171,6 +166,36 @@
       <span class="authors">Iago Leal de Freitas</span>
       <div class="meta">
         <a class="venue" href="/data/mscthesis.pdf">Master's Thesis</a>
+      </div>
+    </li> -->
+    <li>
+      <div class="title">
+        <span class="date">2026</span>
+        <a href="https://github.com/vucongtuanduong/codecrafters-shell-go1">
+          Shell implementation from scratch in Go
+        </a>
+      </div>
+      <div class="meta">
+        <span class="authors">
+          Duong Vu Cong Tuan
+        </span>
+        <!-- <a class="venue" href="https://openreview.net/forum?id=EL002DTBRA">NeurIPS 2025 ScaleOpt Workshop</a> -->
+      </div>
+    </li>
+
+
+    <li>
+      <div class="title">
+        <span class="date">2025</span>
+        <a href="https://github.com/Duong-Vu-Personal-Projects/load-testing-system">
+          Load testing system
+        </a>
+      </div>
+      <div class="meta">
+        <span class="authors">
+          Duong Vu Cong Tuan
+        </span>
+        <!-- <a class="venue" href="https://openreview.net/forum?id=EL002DTBRA">NeurIPS 2025 ScaleOpt Workshop</a> -->
       </div>
     </li>
   </ol>
