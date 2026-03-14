@@ -26,6 +26,9 @@
 [View all...](/posts)
 :::
 
+
+
+```{=html}
 <!-- Projects panel -->
 <section id="projects" class="panel" style="grid-column: 1 / -1;">
   <h2 class="section-title">Projects</h2>
@@ -44,7 +47,7 @@
         </span>
         <div class="meta">
           <a class="venue">Go</a>
-          <a class="venue bash">Bash</a>
+          <a class="venue">Bash</a>
         </div>
       </div>
     </li>
@@ -63,8 +66,8 @@
         </span>
         <div class="meta">
           <a class="venue">Java</a>
-          <a class="venue Prometheus">Prometheus</a>
-          <a class="venue grafana">Grafana</a>
+          <a class="venue">Prometheus</a>
+          <a class="venue">Grafana</a>
         </div>
       </div>
     </li>
