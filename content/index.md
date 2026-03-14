@@ -19,12 +19,6 @@
 :::{.panel id="posts"}
 ```{=html}
 <h2 class="section-title">Recent Posts</h2>
-
-<a href="https://github.com/vucongtuanduong/codecrafters-shell-go1">
-          Index
-        </a>
-
-
 ```
 
 {{ post-list 7 }}
