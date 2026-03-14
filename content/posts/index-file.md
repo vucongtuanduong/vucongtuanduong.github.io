@@ -1,7 +1,7 @@
 ---
 title: Index of my blog
 keywords: [automata, quantum computing, tensor networks]
-date: 2025-05-14
+date: 2026-03-14
 suppress-bibliography: true
 thumbnail: "mps-word.png"
 theme: math
