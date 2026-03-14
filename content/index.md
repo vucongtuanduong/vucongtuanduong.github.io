@@ -33,21 +33,22 @@
 <section id="projects" class="panel" style="grid-column: 1 / -1;">
   <h2 class="section-title">Projects</h2>
 
-  <ol class="pub-list" aria-label="Projects">
+  <ol class="project-list" aria-label="Projects">
     <li>
       <div class="title">
-        <span class="date">2026</span>
+        <span class="date">January 2026 - January 2026</span>
         <a href="https://github.com/vucongtuanduong/codecrafters-shell-go1">
           Shell implementation from scratch in Go
         </a>
       </div>
       <div class="meta">
-        <span class="authors">
-          Duong Vu Cong Tuan
-        </span>
+        <span class="authors">Author: Duong Vu Cong Tuan</span>
+        <p class="description">
+          A shell written from scratch in Go, supporting builtin commands (exit, echo, type, pwd, cd), executing external programs, navigation, quoting, redirection, autocompletion, pipelines and history with the help of Codecrafter platform
+        </p>
         <div class="meta">
-          <a class="venue">Go</a>
-          <a class="venue">Bash</a>
+          <a class="skill">Go</a>
+          <a class="skill">Bash</a>
         </div>
       </div>
     </li>
@@ -55,19 +56,20 @@
 
     <li>
       <div class="title">
-        <span class="date">2025</span>
+        <span class="date">April 2025 - June 2025</span>
         <a href="https://github.com/Duong-Vu-Personal-Projects/load-testing-system">
           Load testing system
         </a>
       </div>
       <div class="meta">
-        <span class="authors">
-          Duong Vu Cong Tuan
-        </span>
+        <span class="authors">Author: Duong Vu Cong Tuan</span>
+        <p class="description">
+          A fully dockerized system built with ReactJS and Spring Boot which allows user to create JMeter-like load test scenario in web, schedule, run, and view the visualization result of the test
+        </p>
         <div class="meta">
-          <a class="venue">Java</a>
-          <a class="venue">Prometheus</a>
-          <a class="venue">Grafana</a>
+          <a class="skill">Java</a>
+          <a class="skill">Prometheus</a>
+          <a class="skill">Grafana</a>
         </div>
       </div>
     </li>

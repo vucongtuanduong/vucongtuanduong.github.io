@@ -11,3 +11,5 @@ unposts/
 .direnv
 .envrc
 .harper-dictionary.txt
+
+**/tests/**

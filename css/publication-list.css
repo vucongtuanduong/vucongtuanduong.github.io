@@ -2,7 +2,7 @@
 * Publications List *
 */
 
-.pub-list {
+.project-list {
   list-style: none;
   margin:     0;
   padding:    0;
@@ -44,7 +44,7 @@
       width: 100%;
     }
 
-    .venue {
+    .skill {
       background:   var(--color-crystal);
       color:        var(--color-accent);
       font-weight:  600;
@@ -66,4 +66,10 @@
       text-decoration: none;
     }
   }
+}
+.project-list li .description {
+  margin: 0.25rem 0 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  max-width: calc(var(--article-width));
 }
