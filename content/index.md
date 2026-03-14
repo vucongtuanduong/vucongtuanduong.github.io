@@ -26,61 +26,6 @@
 [View all...](/posts)
 :::
 
-<!-- ```{=html}
-<section id="libraries" class="panel">
-  <h2 class="section-title">Scientific Libraries</h2>
-
-  <ul class="lib-list">
-    <li>
-      <a href="https://github.com/SECQUOIA/TenSolver.jl">
-        <figure class="icon">
-          <img style="display: inline-block;" class="" src="/img/portfolio/secquoia.png" alt="TS">
-        </figure>
-        <div>
-          <h3 class="title">TenSolver.jl</h3>
-          <p class="description">Quantum-Inspired Tensor Network Solver for Quadratic Unconstrained Binary Optimization.</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="https://iagoleal.github.io/RankRevealing.jl">
-        <figure class="icon">
-          <img class="icon" src="/img/portfolio/rank-revealing.svg" alt="RR">
-        </figure>
-        <div>
-          <h3 class="title">RankRevealing.jl</h3>
-          <p class="description">Rank-sensitive algorithms for matrix decompositions over arbitrary fields.</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="https://iagoleal.github.io/Hodge.jl">
-        <figure class="icon">
-          <img  class="" src="/img/portfolio/hodge.svg" alt="H">
-        </figure>
-        <div>
-          <h3 class="title">Hodge.jl</h3>
-          <p class="description">A clean way to calculate Betti numbers of simplicial complexes and (discrete) Hodge decompositions of cochains.</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="https://iagoleal.github.io/DeformableBodies.jl/stable/">
-        <figure class="icon">
-          <img class="icon" src="/img/portfolio/deformable-bodies.svg" alt="DB">
-        </figure>
-        <div>
-          <h3 class="title">DeformableBodies.jl</h3>
-          <p class="description">Dynamics simulator for the change of reference frame problem of self-deforming bodies.</p>
-        </div>
-      </a>
-    </li>
-  </ul>
-</section> -->
-
 <!-- Projects panel -->
 <section id="projects" class="panel" style="grid-column: 1 / -1;">
   <h2 class="section-title">Projects</h2>
@@ -97,7 +42,10 @@
         <span class="authors">
           Duong Vu Cong Tuan
         </span>
-        <!-- <a class="venue" href="https://openreview.net/forum?id=EL002DTBRA">NeurIPS 2025 ScaleOpt Workshop</a> -->
+        <div class="meta">
+          <a class="venue">Go</a>
+          <a class="venue bash">Bash</a>
+        </div>
       </div>
     </li>
 
@@ -113,7 +61,11 @@
         <span class="authors">
           Duong Vu Cong Tuan
         </span>
-        <!-- <a class="venue" href="https://openreview.net/forum?id=EL002DTBRA">NeurIPS 2025 ScaleOpt Workshop</a> -->
+        <div class="meta">
+          <a class="venue">Java</a>
+          <a class="venue Prometheus">Prometheus</a>
+          <a class="venue grafana">Grafana</a>
+        </div>
       </div>
     </li>
   </ol>
