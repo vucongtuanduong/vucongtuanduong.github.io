@@ -15,4 +15,6 @@ This is the index of my blog to search more efficient
 
 Index
 =====
-- [Test](https://google.com)
+
+## Index file
+- [Index file](https://vucongtuanduong.github.io/posts/index-file/)

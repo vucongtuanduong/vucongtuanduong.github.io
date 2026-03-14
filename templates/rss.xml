@@ -3,19 +3,19 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:atom="http://www.w3.org/2005/Atom">
    <channel>
-     <title>Iago's Blog</title>
+     <title>Duong Vu's Blog</title>
      <link>$site-url$</link>
-     <description>Iago Leal's blog about math, programming and everything more.</description>
-     <copyright>© $author-meta$, 2020-2026</copyright>
+     <description>Duong Vu's blog about programming, software development, life and more.</description>
+     <copyright>© $author-meta$, $year-range$</copyright>
      <atom:link href="$site-url$/rss.xml" rel="self" type="application/rss+xml" />
      <language>en-us</language>
      <image>
        <url>$site-url$/static/img/me.jpg</url>
        <link>$site-url$</link>
-       <title>Iago's Blog</title>
+       <title>Duong Vu's Blog</title>
      </image>
-     <managingEditor>hello@iagoleal.com</managingEditor>
-     <webMaster>hello@iagoleal.com</webMaster>
+     <managingEditor>$site-url$</managingEditor>
+     <webMaster>$site-url$</webMaster>
      <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
 
     $for(posts)$
