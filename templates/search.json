@@ -1,0 +1,15 @@
+$if(search_index)$
+[
+$for(search_index)$
+  {
+    "title": "$search_index.title$",
+    "href": "$search_index.href$",
+    "date": "$search_index.date$",
+    "themes": [$for(search_index.themes)$"$search_index.themes$"$sep$, $endfor$],
+    "keywords": [$for(search_index.keywords)$"$search_index.keywords$"$sep$, $endfor$],
+    "description": "$search_index.description$",
+    "type": "$search_index.type$"
+  }$sep$,
+$endfor$
+]
+$endif$

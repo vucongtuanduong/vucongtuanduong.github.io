@@ -17,7 +17,7 @@ school-result := $(patsubst $(content)/school/%.md.lhs,$(build)/school/%/index.h
 school-result := $(patsubst $(content)/school/%.md,$(build)/school/%/index.html,$(school-result))
 
 # All additional pages go here
-pages-names  = about masters posts school
+pages-names  = about masters posts school search
 pages-result = $(addprefix $(build)/,$(addsuffix /index.html,$(pages-names)) \
                  index.html 404.html)
 
@@ -69,7 +69,7 @@ endef
 
 .PHONY: all clean serve watch clean-cache clean-build deploy
 
-all: pages posts school stylesheets static feed
+all: pages posts school stylesheets static feed search-index
 
 clean: clean-cache clean-build
 
@@ -149,6 +149,17 @@ $(build)/rss.xml: $(DEPENDENCIES)
 	$(shell [ ! -d $(@D) ] && mkdir -p $(@D))
 	$(PANDOC) --defaults=pandoc.yaml \
 	  --template=templates/rss.xml --lua-filter=filters/rss.lua \
+	  --to plain --standalone \
+	  -f markdown -o "$@" /dev/null
+
+.PHONY: search-index
+
+search-index: $(build)/search.json
+
+$(build)/search.json: $(DEPENDENCIES) $(posts-src) $(school-src)
+	$(shell [ ! -d $(@D) ] && mkdir -p $(@D))
+	$(PANDOC) --defaults=pandoc.yaml \
+	  --template=templates/search.json --lua-filter=filters/search-index.lua \
 	  --to plain --standalone \
 	  -f markdown -o "$@" /dev/null
 
