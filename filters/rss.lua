@@ -11,14 +11,14 @@ local function getfilename(path)
   return fname
 end
 
-function canonical_url(fname)
+function canonical_url(dir, fname)
   local relative = getfilename(fname)
   local sitebase = template_variable("site-url")
 
-  return pandoc.path.join {sitebase, "posts", relative} .. "/"
+  return pandoc.path.join {sitebase, dir, relative} .. "/"
 end
 
-function makeitem(post)
+function makeitem(dir, post)
   local meta = fs.read_metadata(post)
   local date = Date(meta.date)
 
@@ -27,20 +27,26 @@ function makeitem(post)
     date            = date,
     ["date-rfc822"] = date:rfc822(),
     description     = pandoc.utils.stringify(meta.description),
-    url             = canonical_url(post),
+    url             = canonical_url(dir, post),
   }
 
   return info
 end
 
 function Meta(m)
-  local postdir = "content/posts"
-  local posts   = pandoc.system.list_directory(postdir)
+  local dirs = {"posts", "school"}
+  local all_posts = {}
 
-  m.posts = core.map(posts, function(post)
-    return makeitem(pandoc.path.join{postdir, post})
-  end)
+  for _, dir in ipairs(dirs) do
+    local postdir = "content/" .. dir
+    local posts   = pandoc.system.list_directory(postdir)
 
+    for _, post in ipairs(posts) do
+      table.insert(all_posts, makeitem(dir, pandoc.path.join{postdir, post}))
+    end
+  end
+
+  m.posts = all_posts
   table.sort(m.posts, function(a, b) return a.date > b.date end)
 
   return m

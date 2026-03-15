@@ -55,31 +55,39 @@ local function makelist(postlist)
   )
 end
 
-local function make_postlist(dir, n)
-  local path = "content/" .. dir
-  local posts = pandoc.system.list_directory(path)
-  n = math.min(n or math.huge, #posts)
+local function make_postlist(dirs, n)
+  if type(dirs) == "string" then
+    dirs = {dirs}
+  end
 
-  pandoc.log.info(fmt("Making post list for %s with %d out of %d posts", dir, n, #posts))
+  local all_metadata = {}
 
+  for _, dir in ipairs(dirs) do
+    local path = "content/" .. dir
+    local posts = pandoc.system.list_directory(path)
 
-  local metadata = map(posts, function(post)
-    pandoc.log.info("Post list: reading post " .. post)
+    pandoc.log.info(fmt("Found %d posts in %s", #posts, dir))
 
-    local meta = fs.read_metadata(pandoc.path.join{path, post})
+    for _, post in ipairs(posts) do
+      pandoc.log.info("Reading " .. dir .. "/" .. post)
+      local meta = fs.read_metadata(pandoc.path.join{path, post})
 
-    return {
-      href       = fmt("/%s/%s/", dir, getfilename(post)),
-      date       = Date(meta.date),
-      theme      = extract_strings(meta.theme),
-      title      = pandoc.utils.stringify(meta.title),
-      requisites = extract_strings(meta.requisites),
-    }
-  end)
+      table.insert(all_metadata, {
+        href       = fmt("/%s/%s/", dir, getfilename(post)),
+        date       = Date(meta.date),
+        theme      = extract_strings(meta.theme),
+        title      = pandoc.utils.stringify(meta.title),
+        requisites = extract_strings(meta.requisites),
+      })
+    end
+  end
 
-  table.sort(metadata, function(a, b) return a.date > b.date end)
+  n = math.min(n or math.huge, #all_metadata)
+  pandoc.log.info(fmt("Making list with %d out of %d total items", n, #all_metadata))
 
-  local items = map(take(metadata, n), makeitem)
+  table.sort(all_metadata, function(a, b) return a.date > b.date end)
+
+  local items = map(take(all_metadata, n), makeitem)
 
   return makelist(items)
 end
@@ -97,6 +105,12 @@ function Block(elem)
     local num_school = string.match(text, "^%s*{{%s*school%-list%s*(%d*)%s*}}%s*$")
     if num_school then
       local postlist = make_postlist("school", tonumber(num_school))
+      return pandoc.RawBlock("html", postlist)
+    end
+
+    local num_recent = string.match(text, "^%s*{{%s*recent%-list%s*(%d*)%s*}}%s*$")
+    if num_recent then
+      local postlist = make_postlist({"posts", "school"}, tonumber(num_recent))
       return pandoc.RawBlock("html", postlist)
     end
   end

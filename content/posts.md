@@ -7,20 +7,16 @@ title: Posts
 ```{=html}
 <ul class="theme-legend">
   <li>
-    <span class="theme-marker math" title="math"></span>
-    <span>math</span>
+    <span class="theme-marker distributed-systems" title="distributed systems"></span>
+    <span>distributed<br>systems</span>
   </li>
   <li>
-    <span class="theme-marker workflow" title="workflow"></span>
-    <span>workflow</span>
+    <span class="theme-marker software" title="software"></span>
+    <span>software</span>
   </li>
   <li>
-    <span class="theme-marker haskell" title="literate haskell"></span>
-    <span>literate<br>haskell</span>
-  </li>
-  <li>
-    <span class="theme-marker empty interactive" title="interactive"></span>
-    <span>interactive</span>
+    <span class="theme-marker life" title="life"></span>
+    <span>life</span>
   </li>
 </ul>
 ```

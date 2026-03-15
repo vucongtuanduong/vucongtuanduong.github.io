@@ -115,8 +115,12 @@ ul.post-list, ol.post-list {
     --color-dot: #E6B800;      /* vibrant, elegant gold */
   }
 
-  &.haskell {
-    --color-dot: #6C2EB7;      /* deep purple */
+  &.lua {
+    --color-dot: #00007C ;     /* Lua's blue */
+  }
+
+  &.workflow {
+    --color-dot: #1565C0;      /* strong blue */
   }
 
   &.distributed-systems {
@@ -124,19 +128,35 @@ ul.post-list, ol.post-list {
   }
 
   &.software {
-    --color-dot: #6C2EB7;      /* deep purple */
+    --color-dot: #1565C0;      /* strong blue */
   }
 
   &.life {
-    --color-dot: #6C2EB7;      /* deep purple */
+    --color-dot: #E91E63;      /* Rose */
   }
 
-  &.lua {
-    --color-dot: #00007C ;     /* Lua's blue */
+  &.information-retrieval {
+    --color-dot: #FF5722;      /* deep orange */
   }
 
-  &.workflow {
-    --color-dot: #1565C0;      /* strong blue */
+  &.deep-learning {
+    --color-dot: #4CAF50;      /* Green */
+  }
+
+  &.big-data {
+    --color-dot: #FFD600;      /* Yellow */
+  }
+
+  &.nlp {
+    --color-dot: #00BCD4;      /* Cyan */
+  }
+
+  &.graduation-project {
+    --color-dot: #795548;      /* Brown */
+  }
+
+  &.time-series {
+    --color-dot: #9C27B0;      /* Purple */
   }
 
   &.empty {

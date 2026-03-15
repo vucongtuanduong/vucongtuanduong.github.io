@@ -125,7 +125,7 @@ $(build)/school/%/index.html: $(content)/school/%.md.lhs $(DEPENDENCIES)
 
 pages: $(pages-result)
 
-$(build)/index.html: $(content)/index.md $(DEPENDENCIES) $(posts-src)
+$(build)/index.html: $(content)/index.md $(DEPENDENCIES) $(posts-src) $(school-src)
 	$(call generate_page,$<,$@,markdown,-M title:'Home')
 
 $(build)/404.html: $(content)/404.html   $(DEPENDENCIES)

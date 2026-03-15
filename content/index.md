@@ -24,7 +24,7 @@
         </a>
 ```
 
-{{ post-list 7 }}
+{{ recent-list 7 }}
 
 [View all...](/posts)
 :::
