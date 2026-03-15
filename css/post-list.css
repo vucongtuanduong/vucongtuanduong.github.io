@@ -119,6 +119,18 @@ ul.post-list, ol.post-list {
     --color-dot: #6C2EB7;      /* deep purple */
   }
 
+  &.distributed-systems {
+    --color-dot: #6C2EB7;      /* deep purple */
+  }
+
+  &.software {
+    --color-dot: #6C2EB7;      /* deep purple */
+  }
+
+  &.life {
+    --color-dot: #6C2EB7;      /* deep purple */
+  }
+
   &.lua {
     --color-dot: #00007C ;     /* Lua's blue */
   }

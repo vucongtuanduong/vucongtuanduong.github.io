@@ -55,11 +55,12 @@ local function makelist(postlist)
   )
 end
 
-local function make_postlist(path, n)
+local function make_postlist(dir, n)
+  local path = "content/" .. dir
   local posts = pandoc.system.list_directory(path)
   n = math.min(n or math.huge, #posts)
 
-  pandoc.log.info(fmt("Making post list with %d out of %d posts", n, #posts))
+  pandoc.log.info(fmt("Making post list for %s with %d out of %d posts", dir, n, #posts))
 
 
   local metadata = map(posts, function(post)
@@ -68,7 +69,7 @@ local function make_postlist(path, n)
     local meta = fs.read_metadata(pandoc.path.join{path, post})
 
     return {
-      href       = fmt("/posts/%s/", getfilename(post)),
+      href       = fmt("/%s/%s/", dir, getfilename(post)),
       date       = Date(meta.date),
       theme      = extract_strings(meta.theme),
       title      = pandoc.utils.stringify(meta.title),
@@ -86,14 +87,17 @@ end
 function Block(elem)
   if elem.content then
     local text = pandoc.utils.stringify(elem.content)
-    local num  = string.match(text, "^%s*{{%s*post%-list%s*(%d*)%s*}}%s*$")
 
-    if num then
-      local postlist = make_postlist("content/posts", tonumber(num))
+    local num_posts = string.match(text, "^%s*{{%s*post%-list%s*(%d*)%s*}}%s*$")
+    if num_posts then
+      local postlist = make_postlist("posts", tonumber(num_posts))
+      return pandoc.RawBlock("html", postlist)
+    end
 
-      local div = pandoc.RawBlock("html", postlist)
-
-      return div
+    local num_school = string.match(text, "^%s*{{%s*school%-list%s*(%d*)%s*}}%s*$")
+    if num_school then
+      local postlist = make_postlist("school", tonumber(num_school))
+      return pandoc.RawBlock("html", postlist)
     end
   end
 end

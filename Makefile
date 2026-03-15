@@ -12,8 +12,12 @@ posts-src    := $(wildcard $(content)/posts/*)
 posts-result := $(patsubst $(content)/posts/%.md.lhs,$(build)/posts/%/index.html,$(posts-src))
 posts-result := $(patsubst $(content)/posts/%.md,$(build)/posts/%/index.html,$(posts-result))
 
+school-src    := $(wildcard $(content)/school/*)
+school-result := $(patsubst $(content)/school/%.md.lhs,$(build)/school/%/index.html,$(school-src))
+school-result := $(patsubst $(content)/school/%.md,$(build)/school/%/index.html,$(school-result))
+
 # All additional pages go here
-pages-names  = about masters posts
+pages-names  = about masters posts school
 pages-result = $(addprefix $(build)/,$(addsuffix /index.html,$(pages-names)) \
                  index.html 404.html)
 
@@ -65,7 +69,7 @@ endef
 
 .PHONY: all clean serve watch clean-cache clean-build deploy
 
-all: pages posts stylesheets static feed
+all: pages posts school stylesheets static feed
 
 clean: clean-cache clean-build
 
@@ -97,6 +101,20 @@ $(build)/posts/%/index.html: $(content)/posts/%.md $(DEPENDENCIES)
 	$(call generate_post,$<,$@,markdown)
 
 $(build)/posts/%/index.html: $(content)/posts/%.md.lhs $(DEPENDENCIES)
+	$(call generate_post,$<,$@,markdown+lhs)
+
+##########
+# School #
+##########
+
+.PHONY: school
+
+school: $(school-result)
+
+$(build)/school/%/index.html: $(content)/school/%.md $(DEPENDENCIES)
+	$(call generate_post,$<,$@,markdown)
+
+$(build)/school/%/index.html: $(content)/school/%.md.lhs $(DEPENDENCIES)
 	$(call generate_post,$<,$@,markdown+lhs)
 
 ###############
