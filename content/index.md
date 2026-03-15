@@ -22,6 +22,9 @@
 <a href="https://vucongtuanduong.github.io/posts/index-file/">
           Index file of the blog
         </a>
+<a href="https://vucongtuanduong.github.io/school/school-post-index/">
+          Index file of the school posts
+        </a>
 ```
 
 {{ recent-list 7 }}
