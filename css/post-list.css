@@ -111,60 +111,6 @@ ul.post-list, ol.post-list {
     opacity:   0.22;
   }
 
-  &.math {
-    --color-dot: #E6B800;      /* vibrant, elegant gold */
-  }
-
-  &.lua {
-    --color-dot: #00007C ;     /* Lua's blue */
-  }
-
-  &.workflow {
-    --color-dot: #1565C0;      /* strong blue */
-  }
-
-  &.distributed-systems {
-    --color-dot: #6C2EB7;      /* deep purple */
-  }
-
-  &.software {
-    --color-dot: #1565C0;      /* strong blue */
-  }
-
-  &.life {
-    --color-dot: #E91E63;      /* Rose */
-  }
-
-  &.information-retrieval {
-    --color-dot: #FF5722;      /* deep orange */
-  }
-
-  &.deep-learning {
-    --color-dot: #4CAF50;      /* Green */
-  }
-
-  &.big-data {
-    --color-dot: #FFD600;      /* Yellow */
-  }
-
-  &.nlp {
-    --color-dot: #00BCD4;      /* Cyan */
-  }
-
-  &.graduation-project {
-    --color-dot: #795548;      /* Brown */
-  }
-
-  &.time-series {
-    --color-dot: #9C27B0;      /* Purple */
-  }
-
-  &.empty {
-    border-style: dashed;
-    --color-dot: #bbb;
-    pointer-events: none;
-  }
-
   &.interactive {
     position: relative;
     z-index:  1;
@@ -187,6 +133,60 @@ ul.post-list, ol.post-list {
       z-index:          2;
     }
   }
+}
+
+.theme-marker.math {
+  --color-dot: #E6B800;      /* vibrant, elegant gold */
+}
+
+.theme-marker.lua {
+  --color-dot: #00007C ;     /* Lua's blue */
+}
+
+.theme-marker.workflow {
+  --color-dot: #1565C0;      /* strong blue */
+}
+
+.theme-marker.distributed-systems {
+  --color-dot: #6C2EB7;      /* deep purple */
+}
+
+.theme-marker.software {
+  --color-dot: #1565C0;      /* strong blue */
+}
+
+.theme-marker.life {
+  --color-dot: #E91E63;      /* Rose */
+}
+
+.theme-marker.information-retrieval {
+  --color-dot: #FF5722;      /* deep orange */
+}
+
+.theme-marker.deep-learning {
+  --color-dot: #4CAF50;      /* Green */
+}
+
+.theme-marker.big-data {
+  --color-dot: #FFD600;      /* Yellow */
+}
+
+.theme-marker.nlp {
+  --color-dot: #00BCD4;      /* Cyan */
+}
+
+.theme-marker.graduation-project {
+  --color-dot: #795548;      /* Brown */
+}
+
+.theme-marker.time-series {
+  --color-dot: #9C27B0;      /* Purple */
+}
+
+.theme-marker.empty {
+  border-style: dashed;
+  --color-dot: #bbb;
+  pointer-events: none;
 }
 
 @keyframes orbit-dot-simple {

@@ -22,7 +22,10 @@ local function extract_strings(xs)
 end
 
 local function theme_marker(themes)
-  local classes = {"theme-marker", table.unpack(themes)}
+  local classes = {"theme-marker"}
+  for _, t in ipairs(themes) do
+    table.insert(classes, tostring(t):gsub("%s+", "-"):lower())
+  end
 
   return table.concat(classes, " ")
 end
