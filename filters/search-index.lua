@@ -12,7 +12,9 @@ local function extract_strings(xs)
   if pandoc.utils.type(xs) ~= "List" then
     xs = pandoc.List({xs})
   end
-  return xs:map(pandoc.utils.stringify)
+  return xs:map(function(s)
+    return pandoc.utils.stringify(s):gsub("%s+", "-"):lower()
+  end)
 end
 
 function Meta(m)

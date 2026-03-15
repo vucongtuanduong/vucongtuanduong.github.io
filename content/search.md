@@ -7,6 +7,7 @@ header-includes:
 
 # Search
 
+```{=html}
 <div class="search-container">
     <input type="text" id="search-input" placeholder="Search by title, keyword, or tag..." autofocus>
     
@@ -18,3 +19,4 @@ header-includes:
         <p>Loading index...</p>
     </div>
 </div>
+```
